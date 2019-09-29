@@ -10,6 +10,8 @@ ocspcheck_LDADD += $(abs_top_builddir)/ssl/libssl.la
 ocspcheck_LDADD += $(abs_top_builddir)/tls/libtls.la
 ocspcheck_LDADD += $(PLATFORM_LDADD) $(PROG_LDADD)
 
+ocspcheck_LDFLAGS = $(PROG_LDFLAGS)
+
 ocspcheck_SOURCES = http.c
 ocspcheck_SOURCES += ocspcheck.c
 noinst_HEADERS = http.h

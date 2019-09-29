@@ -17,6 +17,8 @@ nc_LDADD += $(abs_top_builddir)/ssl/libssl.la
 nc_LDADD += $(abs_top_builddir)/tls/libtls.la
 nc_LDADD += $(PLATFORM_LDADD) $(PROG_LDADD)
 
+nc_LDFLAGS = $(PROG_LDFLAGS)
+
 AM_CPPFLAGS += -I$(top_srcdir)/apps/nc/compat
 
 nc_SOURCES = atomicio.c

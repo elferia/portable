@@ -8,6 +8,8 @@ openssl_LDADD = $(abs_top_builddir)/ssl/libssl.la
 openssl_LDADD += $(abs_top_builddir)/crypto/libcrypto.la
 openssl_LDADD += $(PLATFORM_LDADD) $(PROG_LDADD)
 
+openssl_LDFLAGS = $(PROG_LDFLAGS)
+
 openssl_SOURCES = apps.c
 openssl_SOURCES += asn1pars.c
 openssl_SOURCES += ca.c
